@@ -1,10 +1,8 @@
 <div class="container-fluid bg-light">
     <div class="container bg-light">
-
         <div class="row mt-4" style="height: 500px;">
             <div class="col"></div>
             <div class="col-md-6 bg-white shadow rounded">
-
                 <div class="card mt-4 rounded">
                     <nav class="navbar rounded " style="background-color: rgb(34, 32, 61); color: white;">
                         <div class="container-fluid">
@@ -12,16 +10,13 @@
                         </div>
                     </nav>
                 </div>
-
                 <div class="shadow">
                     <div class="input-group p-4">
                         <input type="text" class="form-control" placeholder="Enter task " name="task" [(ngModel)]="addTaskValue">
                         <button class="btn btn-outline-success" type="button" (click)="addTask()"><i class="bi bi-cloud-upload-fill"></i></button>
                     </div>
                 </div>
-
                 <h4 class="text-primary mt-4">Tasks : </h4>
-
                 <div style="overflow-y: auto; height: 370px;">
                     <div class="m-3" *ngFor="let task of taskArray">
                         <div class="p-3 shadow border" id="tasks" >
@@ -30,31 +25,19 @@
                                   <h6>{{ task.taskName }}</h6>
                                 </div>
                                 <div class="col-md-1 col-sm-1 col-1 d-flex align-items-center"> <!-- Adjust column sizes for different screen sizes -->
-                                  <button
-                                    class="btn btn-outline-primary"
-                                    data-bs-toggle="modal"
-                                    type="button"
-                                    data-bs-target="#exampleModal"
-                                    (click)="call(task)"
-                                  >
+                                  <button class="btn btn-outline-primary" data-bs-toggle="modal" type="button" data-bs-target="#exampleModal" (click)="call(task)">
                                     <i class="bi bi-pencil-square"></i>
                                   </button>
                                 </div>
                                 <div class="col-md-1 col-sm-1 col-1 d-flex align-items-center"> <!-- Adjust column sizes for different screen sizes -->
-                                  <button
-                                    class="btn btn-outline-danger mx-2"
-                                    (click)="deleteTask(task)"
-                                  >
+                                  <button class="btn btn-outline-danger mx-2" (click)="deleteTask(task)">
                                     <i class="bi bi-trash3-fill"></i>
                                   </button>
                                 </div>
-                              </div>
-                              
-                              
+                            </div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
@@ -71,11 +54,8 @@
                     </div>
                     </div>
                 </div>
-
             </div>
             <div class="col"></div>
-
         </div>
-
     </div>
 </div>
